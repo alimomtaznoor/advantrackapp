@@ -1,0 +1,40 @@
+{
+  "cities": [
+    {
+      "id": "9b24",
+      "cityName": "Castello de la Plana",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-12-11T11:18:07.283Z",
+      "notes": "",
+      "position": {
+        "lat": "40.00247454070956",
+        "lng": "-0.15861511230468753"
+      }
+    },
+    {
+      "id": "6068",
+      "cityName": "Lousa",
+      "country": "Portugal",
+      "emoji": "🇵🇹",
+      "date": "2024-12-11T11:25:16.417Z",
+      "notes": "",
+      "position": {
+        "lat": "40.084726055793304",
+        "lng": "-8.220474367779552"
+      }
+    },
+    {
+      "id": "402c",
+      "cityName": "Grillon",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2024-12-11T11:25:30.431Z",
+      "notes": "",
+      "position": {
+        "lat": "44.40544436743904",
+        "lng": "4.921875000000001"
+      }
+    }
+  ]
+}
