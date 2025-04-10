@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { CitiesProvider } from "./contexts/CitiesContext";
 import { AuthProvider } from "./contexts/FakeAuthContext";
 import Product from "./pages/Product";
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/HomePage.jsx";
 import Pricing from "./pages/Pricing";
 import NotFound from "./pages/PageNotFound";
 import AppLayout from "./pages/AppLayout";
