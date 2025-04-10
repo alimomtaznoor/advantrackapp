@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import {  CitiesProvider } from "./contexts/CitiesContext";
+import { CitiesProvider } from "./contexts/CitiesContext";
 import { AuthProvider } from "./contexts/FakeAuthContext";
 import Product from "./pages/Product";
 import HomePage from "./pages/HomePage";
@@ -20,7 +20,7 @@ function App() {
         <CitiesProvider>
           <BrowserRouter>
             <Routes>
-              <Route index element={<HomePage />} />
+              <Route path="/" element={<HomePage />} />
               <Route path="/product" element={<Product />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="login" element={<Login />} />
