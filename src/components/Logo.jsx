@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 function Logo() {
   return (
     <Link to="/">
-      <img src="/logo.png" alt="WorldWise logo" className={styles.logo} />
+      <p className={styles.logo}>
+        Advan<span className={styles.span}>Track</span>
+      </p>
     </Link>
   );
 }

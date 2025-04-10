@@ -13,18 +13,6 @@
       }
     },
     {
-      "id": "6068",
-      "cityName": "Lousa",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2024-12-11T11:25:16.417Z",
-      "notes": "",
-      "position": {
-        "lat": "40.084726055793304",
-        "lng": "-8.220474367779552"
-      }
-    },
-    {
       "id": "402c",
       "cityName": "Grillon",
       "country": "France",
@@ -34,6 +22,42 @@
       "position": {
         "lat": "44.40544436743904",
         "lng": "4.921875000000001"
+      }
+    },
+    {
+      "id": "bbc2",
+      "cityName": "Borriol",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-02-19T18:05:40.980Z",
+      "notes": "",
+      "position": {
+        "lat": "40.06707041344516",
+        "lng": "-0.010986328125"
+      }
+    },
+    {
+      "id": "5cc4",
+      "cityName": "Villahermosa del Rio",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-02-19T18:48:09.705Z",
+      "notes": "",
+      "position": {
+        "lat": "40.20404423904601",
+        "lng": "-0.41954040527343756"
+      }
+    },
+    {
+      "id": "4ba3",
+      "cityName": "Linares de Mora",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-02-19T18:48:19.810Z",
+      "notes": "",
+      "position": {
+        "lat": "40.32143852196317",
+        "lng": "-0.5740356445312501"
       }
     }
   ]

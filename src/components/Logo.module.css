@@ -1,3 +1,9 @@
 .logo {
   height: 5.2rem;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+span {
+  color: #00c46a;
 }
