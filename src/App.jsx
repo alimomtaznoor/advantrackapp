@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { useCities, CitiesProvider } from "./contexts/CitiesContext";
+import {  CitiesProvider } from "./contexts/CitiesContext";
 import { AuthProvider } from "./contexts/FakeAuthContext";
 import Product from "./pages/Product";
 import HomePage from "./pages/HomePage";
