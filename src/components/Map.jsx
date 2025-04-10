@@ -1,8 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useNavigate, useSearchParams } from "react-router-dom";
-import styles from "./Map.module.css";
-import Button from "./Button";
-
+import { useNavigate } from "react-router-dom";
 import {
   MapContainer,
   TileLayer,
@@ -11,47 +8,50 @@ import {
   useMap,
   useMapEvents,
 } from "react-leaflet";
+
+import styles from "./Map.module.css";
 import { useEffect, useState } from "react";
 import { useCities } from "../contexts/CitiesContext";
-import { useGeoLocation } from "../hooks/UseGeoLocation";
+import { useGeoLocation } from "../hooks/useGeolocation";
 import { useUrlLocation } from "../hooks/useUrlPosition";
+import Button from "./Button";
 
 function Map() {
-  // const navigate = useNavigate();
+  const { cities } = useCities();
   const [mapPosition, setMapPosition] = useState([40, 0]);
   const {
     isLoading: isLoadingPosition,
-    position: geoLocationPosition,
+    position: geolocationPosition,
     getPosition,
   } = useGeoLocation();
-  const [lat, lng] = useUrlLocation();
-  const { cities } = useCities();
+  const [mapLat, mapLng] = useUrlLocation();
 
   useEffect(
     function () {
-      if (lat && lng) setMapPosition([lat, lng]);
+      if (mapLat && mapLng) setMapPosition([mapLat, mapLng]);
     },
-    [lat, lng]
+    [mapLat, mapLng]
   );
 
   useEffect(
     function () {
-      if (geoLocationPosition)
-        setMapPosition([geoLocationPosition.lat, geoLocationPosition.lng]);
+      if (geolocationPosition)
+        setMapPosition([geolocationPosition.lat, geolocationPosition.lng]);
     },
-    [geoLocationPosition]
+    [geolocationPosition]
   );
+
   return (
     <div className={styles.mapContainer}>
-      {!geoLocationPosition && (
+      {!geolocationPosition && (
         <Button type="position" onClick={getPosition}>
-          {isLoadingPosition ? "Loading..." : "Use Your Position"}
+          {isLoadingPosition ? "Loading..." : "Use your position"}
         </Button>
       )}
+
       <MapContainer
-        // center={[lat, lng]}
         center={mapPosition}
-        zoom={11}
+        zoom={6}
         scrollWheelZoom={true}
         className={styles.map}
       >
@@ -65,13 +65,11 @@ function Map() {
             key={city.id}
           >
             <Popup>
-              <span>
-                {city.emoji}
-                <span>{city.cityName}</span>
-              </span>
+              <span>{city.emoji}</span> <span>{city.cityName}</span>
             </Popup>
           </Marker>
         ))}
+
         <ChangeCenter position={mapPosition} />
         <DetectClick />
       </MapContainer>
@@ -81,16 +79,20 @@ function Map() {
 
 function ChangeCenter({ position }) {
   const map = useMap();
-  map.setView(position);
+
+  useEffect(() => {
+    if (position) map.setView(position);
+  }, [map, position]);
+
   return null;
 }
 
+
 function DetectClick() {
   const navigate = useNavigate();
+
   useMapEvents({
-    click: (e) => {
-      navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`);
-    },
+    click: (e) => navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`),
   });
 }
 

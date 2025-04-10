@@ -11,17 +11,13 @@ export default function Product() {
           alt="person with dog overlooking mountain with sunset"
         />
         <div>
-          <h2>About WorldWide.</h2>
+          <h2>About AdvanTrack.</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo est
-            dicta illum vero culpa cum quaerat architecto sapiente eius non
-            soluta, molestiae nihil laborum, placeat debitis, laboriosam at fuga
-            perspiciatis?
+            AdvanTrack is a web application that allows you to track your
+            expenses and see your progress towards your financial goals.
           </p>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis
-            doloribus libero sunt expedita ratione iusto, magni, id sapiente
-            sequi officiis et.
+           It is a simple and easy to use application that allows you to track places you have been, the places you have gone, and the expenses you have made. You can also set financial goals and track your progress towards them.
           </p>
         </div>
       </section>
